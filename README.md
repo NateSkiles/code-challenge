@@ -21,8 +21,27 @@ Parse directly the HTML result page ([html file]) in this repository. No extra H
 [html file]: https://raw.githubusercontent.com/serpapi/code-challenge/master/files/van-gogh-paintings.html
 [expected array]: https://raw.githubusercontent.com/serpapi/code-challenge/master/files/expected-array.json
 
-Add also to your array the painting thumbnails present in the result page file (not the ones where extra requests are needed). 
+Add also to your array the painting thumbnails present in the result page file (not the ones where extra requests are needed).
 
 Test against 2 other similar result pages to make sure it works against different layouts. (Pages that contain the same kind of carrousel. Don't necessarily have to be paintings.)
 
 The suggested time for this challenge is 4 hours. But, you can take your time and work more on it if you want.
+
+## Solution
+
+This solution uses Cheerio to parse the HTML file and extract the required information. The extracted information is then stored in an array of objects. The array is then converted to a JSON string and written to a file found in the [output](/ouput) directory.
+
+### Setup
+
+Requires Node.js (Recommend 20 or higher)
+
+```bash
+npm install
+npm start
+```
+
+### Test
+
+```bash
+npm jest
+```
